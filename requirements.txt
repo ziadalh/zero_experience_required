@@ -1,0 +1,8 @@
+cython
+pkgconfig
+h5py
+attrs==19.3.0
+gym==0.10.9
+numpy==1.19.2
+pandas==1.1.1
+tqdm==4.47.0

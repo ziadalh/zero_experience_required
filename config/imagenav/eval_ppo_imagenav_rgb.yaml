@@ -1,0 +1,67 @@
+BASE_TASK_CONFIG_PATH: "config/imagenav/gibson/imagenav_rgb.yaml"
+TRAINER_NAME: "ppox"
+ENV_NAME: "NavRLEnvX"
+SIMULATOR_GPU_ID: 0
+TORCH_GPU_ID: 0
+VIDEO_OPTION: []
+# Can be uncommented to generate videos.
+# VIDEO_OPTION: ["disk", "tensorboard"]
+TENSORBOARD_DIR: "tb"
+VIDEO_DIR: "video_dir"
+# Evaluate on all episodes
+TEST_EPISODE_COUNT: -1
+EVAL_CKPT_PATH_DIR: "checkpoints"
+NUM_PROCESSES: 8
+SENSORS: ["RGB_SENSOR"]
+CHECKPOINT_FOLDER: "checkpoints"
+NUM_UPDATES: 100000
+LOG_INTERVAL: 10
+CHECKPOINT_INTERVAL: 500
+EVAL:
+    SPLIT: "val"
+    USE_CKPT_CONFIG: False
+
+RL:
+  REWARD_MEASURE: "distance_to_view"
+  REWARD_MEASURES: []
+  REWARD_SCALES: [1.0]
+  SUCCESS_MEASURE: "view_match"
+  SUCCESS_REWARD: 10.0
+  SLACK_REWARD: -0.01
+
+  POLICY:
+    name: "NavNetPolicy"
+
+  PPO:
+    # ppo params
+    clip_param: 0.2
+    ppo_epoch: 2
+    num_mini_batch: 2
+    value_loss_coef: 0.5
+    entropy_coef: 0.01
+    lr: 2.5e-4
+    eps: 1e-5
+    max_grad_norm: 0.2
+    num_steps: 128
+    use_gae: True
+    gamma: 0.99
+    tau: 0.95
+    reward_window_size: 50
+    use_linear_lr_decay: False
+    use_linear_clip_decay: False
+    use_normalized_advantage: False
+    # visual encoder config
+    backbone: "fast_resnet9"
+    visual_encoder_init: ""
+    visual_encoder_embedding_size: 512
+    visual_obs_inputs: ["rgb"]
+    # state encoder config
+    rnn_type: "GRU"
+    num_recurrent_layers: 2
+    hidden_size: 128
+    input_size: 128
+
+  DDPPO:
+    sync_frac: 0.6
+    # The PyTorch distributed backend to use
+    distrib_backend: GLOO

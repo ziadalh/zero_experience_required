@@ -1,0 +1,6 @@
+[submodule "dependencies/habitat-lab"]
+	path = dependencies/habitat-lab
+	url = git@github.com:facebookresearch/habitat-lab.git
+[submodule "dependencies/habitat-sim"]
+	path = dependencies/habitat-sim
+	url = git@github.com:facebookresearch/habitat-sim.git
