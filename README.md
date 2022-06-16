@@ -152,3 +152,6 @@ In our work, we used parts of [Habitat Lab](https://github.com/facebookresearch/
     arxivId = {2202.02440}
 }
 ```
+
+## License
+This project is released under the MIT license, as found in the [LICENSE](LICENSE) file.
