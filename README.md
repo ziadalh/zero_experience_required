@@ -74,6 +74,8 @@ You can download the datasets used in this work from the following table:
 | ImageNav   |   Gibson   | val     |  [imagenav_gibson_val](https://utexas.box.com/s/3rzj0nn9nqk4m8ni99ozwjtiqrit32i6)   | `$ZER_ROOT/data/datasets/zer/imagenav/gibson/v1/` |
 | ImageNav   |   HM3D     | val     |  [imagenav_hm3d_val](https://utexas.box.com/s/qwccagc0afbj5h0940h25gjr8fy56v5o)     | `$ZER_ROOT/data/datasets/zer/imagenav/hm3d/v1/` |
 | ImageNav   |   MP3D     | test    |  [imagenav_mp3d_test](https://utexas.box.com/s/0vb7yv0472gp4t48z9p10wnole8siki9)    | `$ZER_ROOT/data/datasets/zer/imagenav/mp3d/v1/` |
+| ObjectNav   |   Gibson     | train    |  [objectnav_gibson_train](https://utexas.box.com/s/7qtqqkxa37l969qrkwdn0lkwitmyropp)    | `$ZER_ROOT/data/datasets/zer/objectnav/gibson/v1/` |
+| ObjectNav   |   Gibson     | val    |  [objectnav_gibson_val](https://utexas.box.com/s/wu28ms025o83ii4mwfljot1soj5dc7qo)    | `$ZER_ROOT/data/datasets/zer/objectnav/gibson/v1/` |
 
 
 Download the respective scenes from [Gibson](http://gibsonenv.stanford.edu/database/), [HM3D](https://aihabitat.org/datasets/hm3d/), and [Matterport3D](https://niessner.github.io/Matterport/). Save (or link) the scenes under `$ZER_ROOT/data/scene_datasets/<DATASET_NAME>` where `<DATASET_NAME>` is `gibson`, `hm3d`, or `mp3d`.
